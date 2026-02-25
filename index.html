@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plans Foyer & Extérieur 2026</title>
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --card: #ffffff;
+      --accent: #2d6a4f;
+      --accent-light: #d8f3dc;
+      --text: #2b2b2b;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --orange: #e07a2f;
+      --orange-light: #fef3e2;
+      --blue: #2563eb;
+      --blue-light: #dbeafe;
+      --red: #dc2626;
+      --red-light: #fee2e2;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0 1rem;
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 2rem;
+    }
+    header h1 { font-size: 1.8rem; color: var(--accent); }
+    header p { color: var(--muted); margin-top: .5rem; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .5rem 1rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+      font-size: .9rem;
+      transition: all .2s;
+    }
+    nav a:hover { background: var(--accent-light); }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      scroll-margin-top: 1rem;
+    }
+    section h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin-bottom: .5rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    section h3 {
+      font-size: 1.05rem;
+      margin: 1rem 0 .5rem;
+      color: var(--text);
+    }
+    .subtitle { color: var(--muted); font-size: .9rem; margin-bottom: 1rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: .5rem 0 1rem;
+      font-size: .9rem;
+    }
+    th {
+      background: var(--accent-light);
+      text-align: left;
+      padding: .5rem .75rem;
+      font-weight: 600;
+    }
+    td { padding: .5rem .75rem; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    ul { padding-left: 1.2rem; margin: .5rem 0; }
+    li { margin-bottom: .3rem; }
+    .badge {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .15rem .5rem;
+      border-radius: 4px;
+    }
+    .badge-high { background: var(--red-light); color: var(--red); }
+    .badge-medium { background: var(--orange-light); color: var(--orange); }
+    .badge-info { background: var(--blue-light); color: var(--blue); }
+    .badge-eco { background: var(--accent-light); color: var(--accent); }
+    .timeline {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: .25rem .75rem;
+      margin: .5rem 0;
+      font-size: .9rem;
+    }
+    .timeline dt {
+      font-weight: 600;
+      color: var(--accent);
+      text-align: right;
+    }
+    .tip {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: .75rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: .75rem 0;
+      font-size: .9rem;
+    }
+    .tip strong { color: var(--accent); }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .8rem;
+      padding: 2rem 0 1rem;
+    }
+    @media (max-width: 600px) {
+      body { padding: .5rem; }
+      section { padding: 1rem; }
+      .timeline { grid-template-columns: 80px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🏡 Plans Foyer & Extérieur 2026</h1>
+  <p>Plan d'action familial — Maison, jardin, animaux</p>
+</header>
+
+<nav>
+  <a href="#menage">🧹 Ménage</a>
+  <a href="#potager">🌱 Potager</a>
+  <a href="#animaux">🐔 Animaux</a>
+  <a href="#bois">🪵 Bois</a>
+  <a href="#agroeco">🌻 Agroécologie</a>
+  <a href="#calendrier">📅 Calendrier</a>
+</nav>
+
+<!-- MÉNAGE -->
+<section id="menage">
+  <h2>🧹 Planning ménager</h2>
+  <p class="subtitle">~10 min/jour, dilué sur la semaine. Jean bosse à domicile → petites pauses ménage entre deux sessions de code.</p>
+
+  <table>
+    <thead>
+      <tr><th>Jour</th><th>Tâche</th><th>Durée</th><th>Zone</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Lundi</strong></td><td>Aspirateur RDC</td><td>~10 min</td><td>Salon / bureau / cuisine / couloir</td></tr>
+      <tr><td><strong>Mardi</strong></td><td>Salle de bain + WC</td><td>~10 min</td><td>SDB complète</td></tr>
+      <tr><td><strong>Mercredi</strong></td><td>Cuisine</td><td>~10 min</td><td>Surfaces, évier, plaque, micro-ondes</td></tr>
+      <tr><td><strong>Jeudi</strong></td><td>Aspirateur étage</td><td>~10 min</td><td>2 chambres</td></tr>
+      <tr><td><strong>Vendredi</strong></td><td>Serpillière RDC</td><td>~15 min</td><td>Sol propre pour le week-end</td></tr>
+      <tr><td><strong>Samedi</strong></td><td>Surfaces + linge</td><td>~15 min</td><td>Miroirs, meubles, lessive</td></tr>
+      <tr><td><strong>Dimanche</strong></td><td>Repos 🎉</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    <strong>💡 Principe :</strong> Petit et régulier > Grand ménage ponctuel. 10 minutes par jour suffisent pour garder la maison propre sans effort perceptible.
+  </div>
+</section>
+
+<!-- POTAGER -->
+<section id="potager">
+  <h2>🌱 Potager 2026</h2>
+  <p class="subtitle">Relance après un an sans potager. Approche progressive avec les légumes habituels + pratiques agroécologiques.</p>
+
+  <h3>Légumes prévus</h3>
+  <table>
+    <thead>
+      <tr><th>Légume</th><th>Semis intérieur</th><th>Repiquage / pleine terre</th><th>Récolte</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>🍅 Tomates</td><td>Fév — Mars</td><td>Mi-mai (après saints de glace)</td><td>Juil — Oct</td></tr>
+      <tr><td>🥒 Concombres</td><td>Mars — Avril</td><td>Mi-mai</td><td>Juil — Sept</td></tr>
+      <tr><td>🥬 Salades</td><td>Mars (échelonné)</td><td>Avril — Juin</td><td>Mai — Oct</td></tr>
+      <tr><td>🫘 Haricots verts</td><td>—</td><td>Mai (semis direct)</td><td>Juil — Sept</td></tr>
+      <tr><td>🧅 Oignons</td><td>Fév — Mars</td><td>Mars — Avril</td><td>Juil — Août</td></tr>
+      <tr><td>🥬 Poireaux</td><td>Fév — Mars</td><td>Mai — Juin</td><td>Oct — Mars</td></tr>
+      <tr><td>🥒 Courgettes</td><td>Avril</td><td>Mi-mai</td><td>Juin — Oct</td></tr>
+      <tr><td>🌶️ Piments doux</td><td>Fév — Mars</td><td>Mi-mai</td><td>Juil — Oct</td></tr>
+      <tr><td>🍆 Aubergines</td><td>Fév — Mars</td><td>Mi-mai</td><td>Juil — Oct</td></tr>
+      <tr><td>🥔 Pommes de terre</td><td>—</td><td>Mars — Avril (en terre)</td><td>Juin — Août</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    <strong>⚠️ Pays basque :</strong> Climat océanique doux mais pluvieux. Les saints de glace (11-13 mai) marquent la fin des risques de gel. Attendre mi-mai pour les plants fragiles (tomates, piments, aubergines).
+  </div>
+
+  <h3>Calendrier résumé</h3>
+  <dl class="timeline">
+    <dt>Fév — Mars</dt><dd>Semis sous abri (tomates, piments, aubergines, poireaux, oignons)</dd>
+    <dt>Mars</dt><dd>Préparer le sol, compost. Planter PDT + oignons en terre</dd>
+    <dt>Avril</dt><dd>Semis courgettes, concombres. Repiquage salades</dd>
+    <dt>Mi-mai</dt><dd>🌡️ Après saints de glace : tout en pleine terre</dd>
+    <dt>Mai — Juin</dt><dd>Semis direct haricots. Paillage. Repiquer poireaux</dd>
+    <dt>Été</dt><dd>Arrosage, récolte, surveillance</dd>
+    <dt>Sept</dt><dd>Dernières récoltes. Engrais vert + couverture sol</dd>
+    <dt>Oct — Nov</dt><dd>Préparer le sol pour l'hiver. Compost.</dd>
+  </dl>
+</section>
+
+<!-- ANIMAUX -->
+<section id="animaux">
+  <h2>🐔 Animaux — Nettoyage trimestriel</h2>
+  <p class="subtitle">Gestion quotidienne par le père de Jean. Jean contribue au nettoyage trimestriel des enclos.</p>
+
+  <table>
+    <thead>
+      <tr><th>Enclos</th><th>Priorité</th><th>Fréquence</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Enclos ânesse</strong></td>
+        <td><span class="badge badge-high">Haute</span></td>
+        <td>Trimestriel</td>
+        <td>Quasi inutilisé car trop sale → priorité absolue au premier nettoyage</td>
+      </tr>
+      <tr>
+        <td><strong>Clapiers (lapins)</strong></td>
+        <td><span class="badge badge-medium">Moyenne</span></td>
+        <td>Trimestriel</td>
+        <td>Litière + désinfection</td>
+      </tr>
+      <tr>
+        <td><strong>Poulailler</strong></td>
+        <td><span class="badge badge-medium">Moyenne</span></td>
+        <td>Trimestriel</td>
+        <td>Litière, perchoirs, pondoirs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Planning trimestriel 2026</h3>
+  <dl class="timeline">
+    <dt>🟢 Mars</dt><dd>Q1 — Nettoyage de printemps (priorité enclos ânesse !)</dd>
+    <dt>🟡 Juin</dt><dd>Q2 — Avant la chaleur d'été</dd>
+    <dt>🟠 Septembre</dt><dd>Q3 — Rentrée</dd>
+    <dt>🔴 Décembre</dt><dd>Q4 — Avant l'hiver</dd>
+  </dl>
+
+  <div class="tip">
+    <strong>🎯 Objectif enclos ânesse :</strong> Un bon nettoyage en mars devrait permettre à l'ânesse de réutiliser l'enclos. Si elle le réinvestit, le nettoyage régulier sera plus facile à maintenir.
+  </div>
+</section>
+
+<!-- BOIS -->
+<section id="bois">
+  <h2>🪵 Bois de chauffage</h2>
+  <p class="subtitle">Retard accumulé : bois coupé et entreposé mais pas rangé à l'abri.</p>
+
+  <h3>Situation</h3>
+  <ul>
+    <li>Branches coupées des arbres du terrain (1,5 ha)</li>
+    <li>Bois entreposé en extérieur → exposé à la pluie</li>
+    <li>Objectif : rapatrier vers l'entrepôt couvert pour séchage</li>
+    <li>Chauffage par cheminée avec capteur thermique</li>
+  </ul>
+
+  <h3>Plan d'action</h3>
+  <table>
+    <thead>
+      <tr><th>Étape</th><th>Quand</th><th>Condition</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Rapatrier le bois</strong> vers l'entrepôt</td>
+        <td><span class="badge badge-high">Dès que possible</span></td>
+        <td>Fenêtre météo sèche (2-3 jours consécutifs sans pluie)</td>
+      </tr>
+      <tr>
+        <td><strong>Ranger et empiler</strong> correctement</td>
+        <td>Dans la foulée</td>
+        <td>Bois surélevé, ventilé, à l'abri</td>
+      </tr>
+      <tr>
+        <td><strong>Séchage</strong></td>
+        <td>Printemps — Été</td>
+        <td>Min. 6 mois pour un bon séchage</td>
+      </tr>
+      <tr>
+        <td><strong>Prêt pour l'hiver</strong> 2026-2027</td>
+        <td>Octobre</td>
+        <td>Stock sec et accessible</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    <strong>🌧️ Pays basque :</strong> La pluie est fréquente. Il faut guetter les fenêtres météo et agir vite. Alfred surveille la météo et signalera les créneaux favorables.
+  </div>
+</section>
+
+<!-- AGROÉCOLOGIE -->
+<section id="agroeco">
+  <h2>🌻 Tips agroécologie</h2>
+  <p class="subtitle">Pratiques simples pour un potager plus résilient et productif, adaptées au climat basque.</p>
+
+  <h3>Associations de plantes bénéfiques</h3>
+  <table>
+    <thead>
+      <tr><th>Association</th><th>Bénéfice</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>🍅 Tomates + 🌿 Basilic</td><td>Le basilic repousse les pucerons et améliore le goût</td></tr>
+      <tr><td>🥕 Carottes + 🧅 Oignons</td><td>L'oignon repousse la mouche de la carotte et inversement</td></tr>
+      <tr><td>🥬 Salades + 🌸 Capucines</td><td>Les capucines attirent les pucerons loin des salades (plante piège)</td></tr>
+      <tr><td>🫘 Haricots + 🌽 Maïs + 🎃 Courges</td><td>« Les trois sœurs » : le maïs tuteure, le haricot fixe l'azote, la courge couvre le sol</td></tr>
+      <tr><td>🍆 Aubergines + 🫘 Haricots</td><td>Le haricot enrichit le sol en azote pour l'aubergine gourmande</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Biodiversité & pollinisateurs</h3>
+  <ul>
+    <li><span class="badge badge-eco">Pollinisateurs</span> Planter <strong>lavande, bourrache, phacélie, tournesols</strong> en bordure de potager</li>
+    <li><span class="badge badge-eco">Anti-limaces</span> <strong>Fougères broyées, cendres de bois, coquilles d'œufs</strong> autour des plants fragiles</li>
+    <li><span class="badge badge-eco">Anti-limaces</span> Planter de la <strong>consoude</strong> et du <strong>fenouil</strong> pour attirer les prédateurs naturels (carabes)</li>
+    <li><span class="badge badge-eco">Sol vivant</span> <strong>Paillage permanent</strong> (paille, feuilles mortes, BRF) pour garder l'humidité et nourrir le sol</li>
+    <li><span class="badge badge-eco">Engrais vert</span> Semer <strong>trèfle, moutarde ou phacélie</strong> en automne sur les parcelles libres</li>
+  </ul>
+
+  <h3>Rotation des cultures (sur 4 ans)</h3>
+  <table>
+    <thead>
+      <tr><th>Année</th><th>Parcelle A</th><th>Parcelle B</th><th>Parcelle C</th><th>Parcelle D</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>2026</strong></td><td>🍅 Fruits (tomates, courgettes, piments)</td><td>🥬 Feuilles (salades, poireaux)</td><td>🥕 Racines (PDT, oignons)</td><td>🫘 Légumineuses (haricots)</td></tr>
+      <tr><td><strong>2027</strong></td><td>🫘 Légumineuses</td><td>🍅 Fruits</td><td>🥬 Feuilles</td><td>🥕 Racines</td></tr>
+      <tr><td><strong>2028</strong></td><td>🥕 Racines</td><td>🫘 Légumineuses</td><td>🍅 Fruits</td><td>🥬 Feuilles</td></tr>
+      <tr><td><strong>2029</strong></td><td>🥬 Feuilles</td><td>🥕 Racines</td><td>🫘 Légumineuses</td><td>🍅 Fruits</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    <strong>🐔 Bonus :</strong> Le fumier des poules et de l'ânesse = or pour le potager ! Composter 6 mois minimum avant utilisation (trop frais = brûle les racines).
+  </div>
+</section>
+
+<!-- CALENDRIER -->
+<section id="calendrier">
+  <h2>📅 Calendrier annuel récapitulatif</h2>
+
+  <table>
+    <thead>
+      <tr><th>Mois</th><th>Maison</th><th>Extérieur</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Fév</strong></td><td>Routine ménage</td><td>Semis sous abri (tomates, piments, aubergines)</td></tr>
+      <tr><td><strong>Mars</strong></td><td>Routine</td><td>🧹 Nettoyage enclos Q1 · Préparer sol · Planter PDT/oignons · 🪵 Rapatrier bois (si sec)</td></tr>
+      <tr><td><strong>Avril</strong></td><td>Routine</td><td>Semis courgettes/concombres · Repiquage salades</td></tr>
+      <tr><td><strong>Mai</strong></td><td>Routine</td><td>🌡️ Après 13 mai : tout en pleine terre · Semis haricots · Paillage</td></tr>
+      <tr><td><strong>Juin</strong></td><td>Routine</td><td>🧹 Nettoyage enclos Q2 · Entretien potager · Arrosage</td></tr>
+      <tr><td><strong>Juil — Août</strong></td><td>Routine</td><td>🍅 Récoltes ! Arrosage régulier</td></tr>
+      <tr><td><strong>Sept</strong></td><td>Routine</td><td>🧹 Nettoyage enclos Q3 · Dernières récoltes · Engrais vert</td></tr>
+      <tr><td><strong>Oct — Nov</strong></td><td>Routine</td><td>Préparer sol hiver · Compost · Stocker bois</td></tr>
+      <tr><td><strong>Déc</strong></td><td>Routine</td><td>🧹 Nettoyage enclos Q4 · Cheminée en route 🔥</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <p>Généré par Alfred 🎩 — Mis à jour le 25 février 2026</p>
+  <p>Plan évolutif, à affiner ensemble au fil des saisons.</p>
+</footer>
+
+</body>
+</html>
